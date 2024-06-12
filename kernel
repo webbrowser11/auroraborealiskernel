@@ -1,2 +1,9 @@
 @echo off
-echo aurora borealis kernel
+echo                        _________
+echo --------    --------   |   __  |  --------  --------
+echo |      |    | |--| |   |  |  | |  | |--| |  |      |
+echo |------|    | |  |_|   |  |__| |  | |  |_|  |------|
+echo |      |    | |        |_______|  | |       |      |
+
+echo borealis kernel
+
