@@ -1,1 +1,3 @@
 #write the kernel here later
+@echo off
+echo aurora borealis kernel
