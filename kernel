@@ -1,9 +1,8 @@
 @echo off
-echo                        _________
-echo --------    --------   |   __  |  --------  --------
-echo |      |    | |--| |   |  |  | |  | |--| |  |      |
-echo |------|    | |  |_|   |  |__| |  | |  |_|  |------|
-echo |      |    | |        |_______|  | |       |      |
-
-echo borealis kernel
-
+color 09
+echo aurora borealis kernel
+color 05
+:command
+set /p input= [borealis|user]
+if %input%==help echo "help, view -s,"
+if %input%==view -s NETCONFIG
