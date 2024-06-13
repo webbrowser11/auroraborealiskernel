@@ -6,3 +6,4 @@ color 05
 set /p input= [borealis|user]
 if %input%==help echo "help, view -s,"
 if %input%==view -s NETCONFIG
+goto command
