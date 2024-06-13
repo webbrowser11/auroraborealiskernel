@@ -1,9 +1,14 @@
-@echo off
-color 09
-echo aurora borealis kernel
-color 05
-:command
-set /p input= [borealis|user]
-if %input%==help echo "help, view -s,"
-if %input%==view -s NETCONFIG
-goto command
+#okay now this is python.
+print("the auroraborealis kernel")
+while true
+usertxt = input("command: ")
+if usertxt=help:
+  print("help")
+  print("ping")
+if usertxt=ping:
+  print("this kernel can only ping:")
+  print("192.675.678 or a LinureOS server")
+  pingamount = input("ping how many times?: ")
+  print("okay we will ping:", pingamount "times")
+  for i in range(pingamount):
+    print("pinged: 192.675.678")
