@@ -1,2 +1,2 @@
 download file here:
-COMING FTE 1.0.0 is realesed
+COMING WHEN 1.0.0 is realesed
