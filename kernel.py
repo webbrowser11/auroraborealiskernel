@@ -28,21 +28,19 @@ Hope you find it useful!
     except PermissionError:
         print("Permission denied. Cannot create directory.")
 
-# Function to read contents of README.txt if in 'my_project' directory
+# Function to read contents of README.txt from 'my_project' directory
 def read_readme():
-    current_dir = os.getcwd()
     project_dir = os.path.abspath("my_project")
-    if current_dir == project_dir or current_dir.startswith(project_dir + os.sep):
-        try:
-            readme_file = os.path.join(current_dir, "README.txt")
-            with open(readme_file, 'r') as f:
-                contents = f.read()
-                print(f"Contents of '{readme_file}':")
-                print(contents)
-        except FileNotFoundError:
-            print("README.txt not found. Make sure 'my_project' directory and README.txt exist.")
-    else:
-        print("You are not in 'my_project' or its subdirectory. Change directory to access README.")
+    readme_file = os.path.join(project_dir, "README.txt")
+    try:
+        with open(readme_file, 'r') as f:
+            contents = f.read()
+            print(f"Contents of '{readme_file}':")
+            print(contents)
+    except FileNotFoundError:
+        print("README.txt not found. Make sure 'my_project' directory and README.txt exist.")
+    except PermissionError:
+        print("Permission denied. Cannot read the file.")
 
 # Check and create 'my_project' directory and README.txt on startup
 create_project()
@@ -55,8 +53,7 @@ while True:
         print("auroraver")
         print("whoami")
         print("ls")
-        print("cd_my_project")
-        print("read_readme")  # Added command to read contents of README.txt
+        print("read_readme")  # Command to read contents of README.txt
         print("exit")
     elif usertxt == "ping":
         print("this kernel can only ping:")
@@ -86,14 +83,6 @@ while True:
             print("Directory not found. Please enter a valid directory path.")
         except PermissionError:
             print("Permission denied. You do not have access to this directory.")
-    elif usertxt == "cd_my_project":
-        try:
-            os.chdir("my_project")
-            print("Changed directory to 'my_project'.")
-        except FileNotFoundError:
-            print("'my_project' directory not found.")
-        except PermissionError:
-            print("Permission denied. Cannot change directory.")
     elif usertxt == "read_readme":
         read_readme()
     elif usertxt == "exit":
