@@ -78,7 +78,7 @@ while True:
             print("Please enter a valid number.")
     elif usertxt == "auroraver":
         print("aurora kernel version:")
-        print("0.2.4 python3")
+        print("0.5.4 python3")
     elif usertxt == "whoami":
         print(user, "online welcome!")
     elif usertxt == "ls":
