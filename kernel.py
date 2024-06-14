@@ -1,5 +1,4 @@
 import os
-import sys
 
 user = input("please verify your username: ")
 print("the auroraborealis kernel")
@@ -35,7 +34,7 @@ def read_readme():
     project_dir = os.path.abspath("my_project")
     if current_dir == project_dir or current_dir.startswith(project_dir + os.sep):
         try:
-            readme_file = os.path.join(project_dir, "README.txt")
+            readme_file = os.path.join(current_dir, "README.txt")
             with open(readme_file, 'r') as f:
                 contents = f.read()
                 print(f"Contents of '{readme_file}':")
@@ -71,7 +70,7 @@ while True:
             print("Please enter a valid number.")
     elif usertxt == "auroraver":
         print("aurora kernel version:")
-        print("0.5.4 python3")
+        print("0.2.4 python3")
     elif usertxt == "whoami":
         print(user, "online welcome!")
     elif usertxt == "ls":
