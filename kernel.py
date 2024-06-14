@@ -12,24 +12,17 @@ def create_project():
             os.mkdir(project_dir)
             print(f"Directory '{project_dir}' created.")
             
-            # Change to the new directory
-            os.chdir(project_dir)
-            
             # Create README file
             readme_content = """\
 Wow, I didn't think people would read this. Well...
 Hello, I am Graham and I love to make programs with my friend Milo, and this is one of those. 
 Hope you find it useful!
 """
-            readme_file = "README.txt"
-            readme_path = os.path.join(os.getcwd(), readme_file)
-            with open(readme_path, 'w') as f:
+            readme_file = os.path.join(project_dir, "README.txt")
+            with open(readme_file, 'w') as f:
                 f.write(readme_content)
                 
-            print(f"Created file '{readme_file}' in '{project_dir}'.")
-            
-            # Go back to the original directory
-            os.chdir("..")
+            print(f"Created file 'README.txt' in '{project_dir}'.")
             
         else:
             print(f"Directory '{project_dir}' already exists.")
@@ -39,8 +32,8 @@ Hope you find it useful!
 # Function to read contents of README.txt if in 'my_project' directory
 def read_readme():
     current_dir = os.getcwd()
-    project_dir = "my_project"
-    if current_dir == os.path.abspath(project_dir) or current_dir.startswith(os.path.abspath(project_dir) + os.sep):
+    project_dir = os.path.abspath("my_project")
+    if current_dir == project_dir or current_dir.startswith(project_dir + os.sep):
         try:
             readme_file = os.path.join(project_dir, "README.txt")
             with open(readme_file, 'r') as f:
@@ -100,6 +93,8 @@ while True:
             print("Changed directory to 'my_project'.")
         except FileNotFoundError:
             print("'my_project' directory not found.")
+        except PermissionError:
+            print("Permission denied. Cannot change directory.")
     elif usertxt == "read_readme":
         read_readme()
     elif usertxt == "exit":
