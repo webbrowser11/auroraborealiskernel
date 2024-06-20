@@ -105,6 +105,6 @@ while True:
             while True:
                 whattoprint = random.choice(pretendhacklist)
                 print(whattoprint)
-                break
     else:
         print("Unknown command. Type 'help' for a list of available commands.")
+
