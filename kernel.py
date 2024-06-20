@@ -1,4 +1,5 @@
 import os
+import random
 
 user = input("please verify your username: ")
 print("the auroraborealis kernel")
@@ -88,5 +89,16 @@ while True:
     elif usertxt == "exit":
         print("Exiting the kernel. Goodbye!")
         break
+    elif usertxt == "hack":
+        print("initate hack?")
+        yesorno = input("[y/n]")
+        elif yesorno == "n":
+        continue
+        elif yesorno == "y":
+            pertendhacklist = [hackstation45947 -----________ windows xp detected inverting viruses, 101101010101010101010101010101010, ping tree-567 --hacker time 1:00:45:67, viruses ready, hacking..., initiating urmom]
+            while true:
+                whattoprint = random.choice(pertendhacklist)
+                print(whattoprint)
     else:
         print("Unknown command. Type 'help' for a list of available commands.")
+        
