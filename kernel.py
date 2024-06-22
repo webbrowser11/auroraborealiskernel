@@ -56,6 +56,7 @@ while True:
         print("ls")
         print("read_readme")  # Command to read contents of README.txt
         print("exit")
+        print("BIOS")
     elif usertxt == "ping":
         print("this kernel can only ping:")
         print("192.168.0.1 or a LinureOS server")
@@ -100,11 +101,20 @@ while True:
                 "101101010101010101010101010101010",
                 "ping tree-567 --hacker time 1:00:45:67",
                 "viruses ready, hacking...",
-                "initiating urmom"
+                "initiating"
             ]
-            while True:
+            for i in range(100):
                 whattoprint = random.choice(pretendhacklist)
                 print(whattoprint)
+    elif usertxt == "BIOS":
+        while True:
+            # Clearing the Screen
+            os.system('cls' if os.name == 'nt' else 'clear')
+            exitorno = input("no bios right now. exit? [y/n]").strip().lower()
+            if exitorno == "y":
+                print("exiting")
+                break
+            elif exitorno == "n":
+                print("ok.")
     else:
         print("Unknown command. Type 'help' for a list of available commands.")
-
