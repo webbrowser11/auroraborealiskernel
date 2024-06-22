@@ -10,14 +10,10 @@ modification
 colabaration
 private use
 --------------------------------------------------------------------------------------------------------------------------------------------
-SMC (scratchmicro computers) has allowed use of this license in other areas than github a local hard drive or anywhere else.
---------------------------------------------------------------------------------------------------------------------------------------------
-SN (solruim networks) has disallowed use of the SNDAT file
+Æ (Alter Net codes) has allowed use of this license in other areas than github a local hard drive or anywhere else.
 --------------------------------------------------------------------------------------------------------------------------------------------
 thank you for understanding.
 ©2024 AlterNet codes foundation
-©2024 scratchMICRO computers
-©2024-2025 Solruim networks
 ©ANC public license
 thank you to evryone who contributed to this project thank you,
 graham.
